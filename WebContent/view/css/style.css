@@ -1,0 +1,281 @@
+@charset "UTF-8";
+@import url("destyle.css");
+@import url('https://fonts.googleapis.com/css2?family=Frijole&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ranchers&display=swap');
+/*----------------------
+　スタート画面
+ ------------------------*/
+.startView {
+	position: relative;
+	width: 1920px;
+	height: 1080px;
+	margin: 0 auto;
+	background-image: url("../images/bg_top.jpg");
+}
+.btnStart {
+	display:block;
+	font-size: 30px;
+	z-index: 100;
+	min-width: 200px;
+    color: #fff;
+    padding: 10px 15px;
+	letter-spacing: 0.05em;
+    border: 2px dashed rgba(255,255,255,0.5);
+    border-radius: 30px;
+    -moz-border-radius: 30px;
+    -webkit-border-radius: 30px;
+	display:inline-block;
+	position:relative;
+	background: #ffc7d8;
+	box-shadow: 0 0 0 3px #efb8c9, 0 2px 3px 3px rgba(0,0,0,0.3);
+	-moz-box-shadow: 0 0 0 3px #efb8c9, 0 2px 3px 3px rgba(0,0,0,0.3);
+	-webkit-box-shadow: 0 0 0 3px #efb8c9, 0 2px 3px 3px rgba(0,0,0,0.3);
+	margin: 0 10px;
+}
+.algin-center {
+	text-align: center;
+	padding-top: 600px;
+}
+/*----------------------
+　バトル画面
+ ------------------------*/
+.gameView {
+	position: relative;
+	width: 1920px;
+	height: 1080px;
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 auto;
+	background-image: url("../images/bg_gameview.jpg");
+/*	background-size: 100vw;*/
+}
+/*-----------　img-box　----------*/
+.img-box {
+	list-style: none;
+	width: 80%;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: flex-end;
+	position: absolute;
+	left: 10%;
+	bottom: 270px;
+	z-index: 1;
+	margin: 0 auto;
+}
+.img-box li {
+	float: left;
+	margin: 0 auto;
+}
+.grid1  {
+  width: 10%;
+}
+.grid2  {
+  width: 20%;
+}
+.grid4  {
+  width: 40%;
+}
+.img-box li img {
+	width: 100%;
+	margin:auto;
+}
+/*-----------　text-box　----------*/
+.text-box {
+	height: 210px;
+	width: 90%;
+	margin: 0 auto 2%;
+	position: absolute;
+    bottom: 0px;
+    right: 5%;
+    z-index: 3;
+}
+.text-bg {
+	border: solid 2px #fff;
+	background-color: #000;
+	opacity: 0.8;
+	border-radius: 15px;
+}
+/*-----------　status　----------*/
+.status-area {
+	padding-top: 20px;
+	padding-left: 4%;
+    height: fit-content;
+    z-index: 2;
+}
+.status {
+	display: inline-block;
+	width: 150px;
+	height: 160px;
+	margin: 10px;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+.status li {
+	color: #fff;
+	font-size: 26px;
+}
+.status li .left{
+	display: inline-block;
+}
+.status li .right{
+	display: inline-block;
+}
+.setName {
+	color: #fff;
+	text-align: center;
+	border-bottom: 1px solid #fff;
+	font-size: 26px;
+}
+.setName span {
+	font-size: 15px;
+	line-height: 10px;
+    display: inherit;
+    margin-top: 15px;
+    letter-spacing: 0.1em;
+}
+.cmd-area {
+	height: 210px;
+	overflow: auto;
+	padding: 5px 20px;
+	width: 15%;
+	float: left;
+	margin-right: 2%;
+}
+.cmd-area li a {
+	padding-left: 20px;
+	color: #fff;
+	font-size: 26px;
+	margin: 0px;
+	text-decoration: none;
+}
+.cmd-area li a:hover:before {
+	text-decoration: none;
+	font-family: 'FontAwesome';
+	content: "\f0da";
+	position: absolute;
+	left : 22px;
+	color : #fff;
+	font-size: 26px;
+}
+.msg-area {
+	width: 83%;
+	float: right;
+	overflow-y: scroll;
+	height: 210px;
+	display: block;
+	padding: 5px;
+}
+#firstMsg,
+.selectList,
+#cmdMsg {
+	bottom: 5%;
+	position: sticky;
+}
+.msg-area p,
+.msg-area li a {
+	color: #fff;
+	font-size: 26px;
+	margin: 0px;
+	padding: 0 5px;
+}
+.selectList li a {
+	display: block;
+}
+.selectList li a:hover {
+	text-decoration: none;
+	color: #000;
+	background-color: #fff;
+
+}
+.nextTurn {
+	text-align: right;
+}
+.nextTurn a {
+	text-decoration: none;
+	color: #fff;
+}
+
+/*
+#scroll-inner {
+	height: auto;
+	padding: 5px 20px 7px;
+}
+*/
+/*-----------　Ending　----------*/
+.Ending {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translateY(-50%) translateX(-50%);
+    z-index: 10;
+}
+.Ending .Ending-text {
+	font-family: 'Ranchers', cursive;
+	letter-spacing: 0.01em;
+	color: #f55875;
+	font-size: 130px;
+	text-shadow:2px 2px 0 #FFF, -2px -2px 0 #FFF,
+		-2px 2px 0 #FFF, 2px -2px 0 #FFF,
+		0px 2px 0 #FFF,  0-1px 0 #FFF,
+		-2px 0 0 #FFF, 2px 0 0 #FFF;
+}
+span.Ending-text {
+    display: inline-block;
+    white-space: nowrap;
+}
+span.Ending-text span {
+    display: inline-block;
+    vertical-align: middle;
+}
+span.Ending-text span:nth-of-type(1) {
+    -webkit-animation: animation 2s ease 0s infinite;
+    animation: animation 2s ease 0s infinite;
+}
+span.Ending-text span:nth-of-type(2) {
+    -webkit-animation: animation 2s ease 0.1s infinite;
+    animation: animation 2s ease 0.1s infinite;
+}
+span.Ending-text span:nth-of-type(3) {
+    -webkit-animation: animation 2s ease 0.2s infinite;
+    animation: animation 2s ease 0.2s infinite;
+}
+span.Ending-text span:nth-of-type(4) {
+    -webkit-animation: animation 2s ease 0.3s infinite;
+    animation: animation 2s ease 0.3s infinite;
+}
+span.Ending-text span:nth-of-type(5) {
+    -webkit-animation: animation 2s ease 0.4s infinite;
+    animation: animation 2s ease 0.4s infinite;
+}
+span.Ending-text span:nth-of-type(6) {
+    -webkit-animation: animation 2s ease 0.5s infinite;
+    animation: animation 2s ease 0.5s infinite;
+}
+span.Ending-text span:nth-of-type(7) {
+    -webkit-animation: animation 2s ease 0.6s infinite;
+    animation: animation 2s ease 0.6s infinite;
+}
+span.Ending-text span:nth-of-type(8) {
+    -webkit-animation: animation 2s ease 0.6s infinite;
+    animation: animation 2s ease 0.6s infinite;
+}
+span.Ending-text span:nth-of-type(9) {
+    -webkit-animation: animation 2s ease 0.6s infinite;
+    animation: animation 2s ease 0.6s infinite;
+}
+
+@-webkit-keyframes animation {
+    20% {
+        -webkit-text-shadow: rgba(247, 96, 145, 1) 5px 0 0;
+        color: transparent;
+    }
+}
+
+@keyframes animation {
+    20% {
+        text-shadow: rgba(247, 96, 145, 1) 5px 0 0;
+        color: transparent;
+    }
+}
